@@ -7,3 +7,11 @@ const root = reactDOM.createRoot(el);
 
 
 root.render(<App />);
+
+
+
+/* Notes:
+video 25: Creating components
+Reminder on how to pass images. 
+
+*/

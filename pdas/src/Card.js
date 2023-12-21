@@ -1,17 +1,17 @@
-import siriPic from './images/siri.png';
+
 
 function Card(props) {
 
-  const { name, handle, theme, pic} = props;
+  const { title, handle, theme, pic, color } = props;
 
-  console.log(pic);
+ 
   return (
     
-    <div>
-      <div>
+    <div >
+      <div >
         <img src={pic} />
       </div>
-      {name}
+      {title}
    <div>
         {handle}
       </div>

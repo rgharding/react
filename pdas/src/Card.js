@@ -1,24 +1,22 @@
 
 
 function Card(props) {
+  
+  const { title, handle, theme, image, alt} = props;
+  
 
-  const { title, handle, theme, pic, color } = props;
 
- 
   return (
     
-    <div >
-      <div >
-        <img src={pic} />
-      </div>
-      {title}
-   <div>
-        {handle}
-      </div>
+    
+    <div>
+      <img src={image} alt={alt} />
+     
+      <div>Title is: {title}</div>     
       
-      <div>
-        {theme}
-      </div>
+      <div>Handle is: {handle}</div>
+      
+      <div>{theme}</div>
 
     </div>
   );

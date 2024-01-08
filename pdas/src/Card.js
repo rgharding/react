@@ -9,15 +9,25 @@ function Card(props) {
   return (
     
     
-    <div>
-      <img src={image} alt={alt} />
-     
-      <div>Title is: {title}</div>     
+    <div className='card'>
+      <div className='card-image'>
+        <figure className='image is-1by1'>
+          <img src={image} alt={alt} />
+        </figure>
+      </div>
       
-      <div>Handle is: {handle}</div>
-      
-      <div>{theme}</div>
+      <div className="media-content">
+        <p className='title is-4'>
+          Title is: {title}
+        </p>
 
+        <p className="subtitle is-6">
+          Handle is: {handle}
+        </p>
+      </div>
+      <div className='content'>
+        {theme}
+      </div>
     </div>
   );
 }

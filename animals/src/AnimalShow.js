@@ -1,7 +1,10 @@
-function AnimalShow() {
+function AnimalShow(props) {
+  
+  const { type } = props
+  
 
   return (
-    <div>AnimalShow</div>
+    <div>{type}</div>
   );
 }
 

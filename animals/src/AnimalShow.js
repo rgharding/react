@@ -1,13 +1,33 @@
+import bird from './svg/bird.svg';
+import cat from './svg/cat.svg';
+import cow from './svg/cow.svg';
+import dog from './svg/dog.svg';
+import gator from './svg/gator.svg';
+import heart from './svg/heart.svg';
+import horse from './svg/horse.svg'
+
+
+
 function AnimalShow(props) {
-  
+
   const { type } = props
-  
+
+  const animalImage = {
+    bird,
+    cat,
+    cow,
+    dog,
+    gator,
+    horse,
+}
 
   return (
-    <div>{type}</div>
+    <div>
+      <img src={animalImage[type]} alt="pic of animal" />
+      <img src={heart} />
+    </div>
   );
 }
 
 
-
-export default AnimalShow;
+export default AnimalShow

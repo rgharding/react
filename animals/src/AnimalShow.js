@@ -1,4 +1,6 @@
+import './AnimalShow.css'
 import { useState } from 'react';
+
 
 import bird from './svg/bird.svg';
 import cat from './svg/cat.svg';
@@ -33,9 +35,10 @@ function AnimalShow(props) {
   
   return (
    
-   <div onClick={handleClick}>
-      <img src={animalImage[type]} alt="pic of animal" />
+   <div className="animal-show" onClick={handleClick}>
+      <img className='animal' src={animalImage[type]} alt="pic of animal" />
       <img 
+      className='heart'
       src={heart} 
       alt='heart'
       style={{width: 10 + 10 * clicks + 'px',   }}

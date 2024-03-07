@@ -1,3 +1,6 @@
+import { useState } from 'react';
+import  './AnimalShow.css';
+
 import bird from './svg/bird.svg';
 import cat from './svg/cat.svg';
 import cow from './svg/cow.svg';
@@ -11,6 +14,8 @@ function AnimalShow(props) {
 
   const { type }  = props;
 
+  const [ clicks, setClicks ] = useState(0);
+
   let image = {
     bird,
     cat,
@@ -21,12 +26,21 @@ function AnimalShow(props) {
     heart,
   }
 
-  
+  const handleClick = () => {
+    setClicks(clicks + 1)
+  };
+
+
   return (
     
-    <div>
-      <img src={image[type]} alt='animal' />
-      <img src={image.heart} alt='heart' />
+    <div className='animal-show' onClick={handleClick}>
+      <img className='animal' src={image[type]} alt='animal' />
+      <img className='heart' src={image.heart} 
+      alt='heart' 
+      style={{ width: 10 + clicks * 10 + 'px' }}
+      />
+
+    
     </div>
 
   );

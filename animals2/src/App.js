@@ -1,5 +1,6 @@
 import { useState } from 'react';
 import AnimalShow from './AnimalShow';
+import './App.css';
 
 
 let animalSelection = ['bird', 'cat', 'cow', ];
@@ -26,12 +27,13 @@ const renderedAnimals = animals.map((animal, index) => {
 })
 
   return (
-    <div>
-      <button  onClick={handleClick}>
+    <div className='app'>
+      
+      <button onClick={handleClick}>
         Add Animal
       </button>
 
-      <div>
+      <div className='animal-list'>
         {renderedAnimals}
       </div>
       

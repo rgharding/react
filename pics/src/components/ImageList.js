@@ -1,3 +1,4 @@
+import './ImageList.css'
 import ImageShow from "./ImageShow";
 
 function ImageList(props) {
@@ -10,7 +11,7 @@ function ImageList(props) {
 
 
   return (
-    <div>
+    <div className='image-list'>
       {renderedImages}
     </div>
   );

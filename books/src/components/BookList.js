@@ -1,10 +1,19 @@
+import BookShow from './BookShow';
 // needs state
 
-function BookList() {
+function BookList(props) {
 
+  const { books, onDelete, onEdit } = props;
+
+  const renderedBooks= books.map( (book) => {
+    return <BookShow book={book} key={book.id} onDelete={onDelete} onEdit={onEdit} />
+  })
+
+ 
+  
   return (
-    <div>
-      BookList
+    <div className='book-list'>
+      {renderedBooks}
     </div>
   );
 };

@@ -1,5 +1,6 @@
 import { useState } from 'react';
 import BookCreate from './components/BookCreate';
+import BookList from './components/BookList';
 
 
 function getRandomNumber() {
@@ -15,9 +16,14 @@ function App() {
     setBooks([...books, newBook]);
 }
 
+const updatedList = () => {
+  return <BookList book={books} />
+}
+
 
   return (
     <div>
+      <BookList  books={books}/>
       <BookCreate onSubmit={onBookCreate} />
     </div>
   );

@@ -14,16 +14,20 @@ function App() {
   const onBookCreate = (title) => {
     let newBook = {title: title, id: getRandomNumber()}
     setBooks([...books, newBook]);
-}
+  }
 
-const updatedList = () => {
-  return <BookList book={books} />
-}
 
+  const onBookDelete = (id) => {
+    const updateBooks = books.filter(book => {
+      return book.id !== id;
+    });
+
+    setBooks(updateBooks);
+  } 
 
   return (
-    <div>
-      <BookList  books={books}/>
+    <div className='app'>
+      <BookList books={books} onDelete={onBookDelete} />
       <BookCreate onSubmit={onBookCreate} />
     </div>
   );

@@ -20,11 +20,12 @@ function BookCreate(props) {
 
 
   return (
-    <div>
+    <div className='book-create'>
+      <h3>Add a Book</h3>
       <form onSubmit={handleSubmit}>
-        <label>Add Book</label>
-        <input onChange={handleChange} value={title}/>
-        <button>Save</button>
+        <label>Tilte</label>
+        <input className='input' onChange={handleChange} value={title}/>
+        <button className="button">Save</button>
       </form>
     </div>
   );

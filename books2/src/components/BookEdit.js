@@ -1,8 +1,16 @@
-function BookEdit() {
+import { useState } from 'react';
+
+function BookEdit(props) {
+
+  const { book } = props
+
+  const [ newTitle, setNewTitle ] = useState(book.title); 
 
   return (
     <div>
-      BookEdit
+      <form>
+        <input value={newTitle}/>
+      </form>
     </div>
   );
 };

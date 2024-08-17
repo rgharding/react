@@ -1,16 +1,18 @@
-import BookShow from './BookShow';
+import BookShow from './BookShow'
+
+
 
 function BookList(props) {
 
-  const { books } = props;
-
-  const updatedList = books.map(book => {
-    return <BookShow book={book} />
-  });
+  const { books, onDelete } = props
+  
+  const renderedBooks = books.map(book => {
+    return <BookShow book={book} key={book.id} onDelete={onDelete} />
+  })
  
   return (
-    <div>
-      {updatedList}
+    <div className='book-list'>
+      {renderedBooks}
     </div>
   );
 };

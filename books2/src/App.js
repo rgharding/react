@@ -25,9 +25,24 @@ function App() {
     setBooks(updateBooks);
   } 
 
+
+  const onBookEdit = ((newTitle, id) => {
+    const updateBooks = books.map(book => {
+      if (book.id === id) {
+        return {...book, title: newTitle}
+      }
+
+      return book;
+    });
+
+    setBooks(updateBooks)
+  });
+
+  
   return (
     <div className='app'>
-      <BookList books={books} onDelete={onBookDelete} />
+      <h3 className='title'>Title</h3>
+      <BookList books={books} onDelete={onBookDelete} onEdit={onBookEdit} />
       <BookCreate onSubmit={onBookCreate} />
     </div>
   );

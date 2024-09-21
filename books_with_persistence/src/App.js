@@ -1,8 +1,12 @@
+import BookCreate from './components/BookCreate';
+
 function App() {
 
 
   return (
-    <div>App</div>
+    <div>
+      <BookCreate />
+    </div>
   );
 }
 

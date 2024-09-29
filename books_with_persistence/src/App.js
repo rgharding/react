@@ -1,5 +1,6 @@
 import { useState } from 'react';
 import BookCreate from './components/BookCreate';
+import BookList from './components/BookList';
 
 
 const getRandomId = () => {
@@ -21,6 +22,7 @@ function App() {
   
   return (
     <div>
+      <BookList books={books} />
       <BookCreate onCreate={onBookCreate} />
     </div>
   );

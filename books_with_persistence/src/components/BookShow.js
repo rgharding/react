@@ -1,8 +1,11 @@
-function BookShow() {
+function BookShow(props) {
+
+  const { book } = props;
+
 
   return (
     <div>
-      BookShow
+      {book.title}
     </div>
   );
 };
